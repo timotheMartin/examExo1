@@ -1,53 +1,52 @@
 package Example;
 
 /**
- * La classe represente un employe.
+ * La classe représente un employé.
  */
 public class employe {
-    private String firstName;
-    private String lastName;
-    private int experienceYears;
-    private String level;
+    private String prenom;
+    private String nom;
+    private int anneesExperience;
+    private String niveau;
 
     /**
-     * @param firstName      le prenom de l'employe
-     * @param lastName       le nom de famille de l'employe
-     * @param experienceYears le nombre d'années d'expérience de l'employe
-     * @param level          le niveau de l'employe
+     * @param prenom           le prénom de l'employé
+     * @param nom              le nom de famille de l'employé
+     * @param anneesExperience le nombre d'années d'expérience de l'employé
+     * @param niveau           le niveau de l'employé
      */
-    public employe(String firstName, String lastName, int experienceYears, String level) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.experienceYears = experienceYears;
-        this.level = level;
+    public employe(String prenom, String nom, int anneesExperience, String niveau) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.anneesExperience = anneesExperience;
+        this.niveau = niveau;
     }
 
     /**
-     * @return le prenom de l'employe
+     * @return le prénom de l'employé
      */
-    public String getFirstName() {
-        return firstName;
+    public String getPrenom() {
+        return prenom;
     }
 
     /**
-     * @return le nom de famille de l'employe
+     * @return le nom de famille de l'employé
      */
-    public String getLastName() {
-        return lastName;
+    public String getNom() {
+        return nom;
     }
 
     /**
-     * @return le nombre d'annes d'experience de l'employe
+     * @return le nombre d'années d'expérience de l'employé
      */
-    public int getExperienceYears() {
-        return experienceYears;
+    public int getAnneesExperience() {
+        return anneesExperience;
     }
 
     /**
-     * @return le niveau de l'employe
+     * @return le niveau de l'employé
      */
-    public String getLevel() {
-        return level;
+    public String getNiveau() {
+        return niveau;
     }
 }
-

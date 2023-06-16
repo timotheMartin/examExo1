@@ -1,43 +1,44 @@
 package Example;
 
 /**
- * cette classe represente le gestionnaire d'employes.
+ * Cette classe représente le gestionnaire d'employés.
  */
 public class employeManager {
 
     /**
-     * @param employe l'employe pour lequel calculer le salaire
+     * @param employe l'employé pour lequel calculer le salaire
      * @return le salaire prévisionnel de l'employé
      */
-    public double calculateSalary(employe employe) {
-        double baseSalary;
+    public double calculerSalaire(employe employe) {
+        double salaireDeBase;
 
-        switch (employe.getLevel()) {
+        switch (employe.getNiveau()) {
             case "Junior":
-                baseSalary = 20000.0;
+                salaireDeBase = 20000.0;
                 break;
-            case "Intermediate":
-                baseSalary = 40000.0;
+            case "Intermédiaire":
+                salaireDeBase = 40000.0;
                 break;
             case "Senior":
-                baseSalary = 60000.0;
+                salaireDeBase = 60000.0;
                 break;
             default:
-                throw new IllegalArgumentException("Niveau d'expérience invalide : " + employe.getLevel());
+                throw new IllegalArgumentException("Niveau d'experience invalide : " + employe.getNiveau());
         }
 
-        double experienceMultiplier = calculateExperienceMultiplier(employe.getExperienceYears());
+        double multiplicateurExperience = calculerMultiplicateurExperience(employe.getAnneesExperience());
 
-        return baseSalary + (baseSalary * experienceMultiplier);
+        return salaireDeBase + (salaireDeBase * multiplicateurExperience);
     }
 
     /**
-     * @param experienceYears le nombre d'annees d'expérience
-     * @return le coefficient d'anciennete calculée
+     * @param anneesExperience le nombre d'annes d'experience
+     * @return le coefficient d'anciennete calculee
      */
-    public double calculateExperienceMultiplier(int experienceYears) {
-        double percentIncreasePerYear = 0.05;
-        double experienceMultiplier = 1.0 + (percentIncreasePerYear * experienceYears);
-        return experienceMultiplier;
+    public double calculerMultiplicateurExperience(int anneesExperience) {
+        double augmentationPourcentageParAnnee = 0.05;
+        double multiplicateurExperience = 1.0 + (augmentationPourcentageParAnnee * anneesExperience);
+        return multiplicateurExperience;
     }
 }
+
